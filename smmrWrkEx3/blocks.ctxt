@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=blocks
+comment1.params=str
+comment1.target=java.lang.String\ smallestLet(java.lang.String)
+comment2.params=strArr\ ch
+comment2.target=int\ numOfStarts(java.lang.String[],\ char)
+numComments=3

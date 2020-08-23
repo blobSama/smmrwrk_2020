@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Stam
+comment1.params=row\ col
+comment1.target=Stam(int,\ int)
+comment2.params=
+comment2.target=java.lang.String\ isOrdered()
+comment3.params=col
+comment3.target=int\ numNegCol(int)
+comment4.params=col
+comment4.target=int\ maxNegCol(int)
+numComments=5
