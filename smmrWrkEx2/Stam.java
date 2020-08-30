@@ -24,9 +24,9 @@ class Stam
                     cntr++;
             }
             if(cntr != i)
-                return "ordered";
+                return "unordered";
         }
-        return "unordered";
+        return "ordered";
     }
     
     public int numNegCol(int col)
