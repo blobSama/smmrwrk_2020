@@ -11,7 +11,7 @@ public class main
     public static void main(String[] args)
     {
         //2
-        /*
+        
         SchoolClass cls1 = new SchoolClass(3, "Geoffrey");
         SchoolClass cls2 = new SchoolClass(2, "George");
         
@@ -52,9 +52,9 @@ public class main
         }
         //3
         System.out.println(cls1.getBigger(cls2));
-        */
+        
         //6
-        SchoolClass[] School = new SchoolClass[5];
+    /*    SchoolClass[] School = new SchoolClass[5];
         String teachName, name;
         int classNum;
         for(int i = 0; i < 5; i++)
@@ -83,7 +83,7 @@ public class main
         System.out.println("The average number of students in a class is: " + (sumAll/School[0].getTotNumClass()) + ".");
     }
 
-    
+    */
     //4
     public void addStudent(SchoolClass cls1, SchoolClass cls2, String name)
     {
