@@ -1,6 +1,6 @@
 class Stam 
 { 
-    private int[][] mat;
+    public int[][] mat;
     public Stam(int row,int col) 
     {   
         mat = new int[row][col]; 
