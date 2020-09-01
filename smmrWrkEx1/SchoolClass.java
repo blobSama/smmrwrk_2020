@@ -33,7 +33,7 @@ public class SchoolClass
     
     public int getTotNumClass()
     {
-        return this.totNumClass;
+        return totNumClass;
     }
     
     public String[] getStudNames()
@@ -60,19 +60,20 @@ public class SchoolClass
     
     public void setStudName(String[] names)
     {
-        int i = 0;
-        for(; i < names.length; i++)
+        int i;
+        for(i = 0; i < names.length; i++)
         {
             this.studNames[i] = names[i];
         }
         
         if(i != 39)
         {
-            for(i = i + 1; i < this.studNames.length; i++)
+            for(; i < this.studNames.length; i++)
             {
                 this.studNames[i] = "";
             }
         }
+        cntr = getNumOfStudents();
     }
     
     
@@ -85,17 +86,12 @@ public class SchoolClass
             if(studNames[i] != null)
                 counter++;
         }
-        String[] s1 = new String[counter];
-        for(int i = 0; i < s1.length; i++)
-        {
-            s1[i] = studNames[i];
-        }
-        return (s1.length);
+        return counter;
     }
     
     public void insertStudent(String student)
     {
-        if(cntr == 39)
+        if(cntr == 40)
             System.out.println("Sorry, there is not enough room for another student.");
         else
         {
@@ -107,7 +103,7 @@ public class SchoolClass
     public int getNameLength()
     {
         int sum = 0;
-        for(int i = 0; i < studNames.length; i++)
+        for(int i = 0; i < getNumOfStudents(); i++)
         {
             if(this.studNames[i].length() >= 8)
                 sum++;
@@ -117,10 +113,10 @@ public class SchoolClass
     
     public String getBigger(SchoolClass cls)
     {
-        if(this.studNames.length > cls.studNames.length)
+        if(this.getNumOfStudents() > cls.getNumOfStudents())
             return this.getName();
         else
-            if(this.studNames.length < cls.studNames.length)
+            if(this.getNumOfStudents() < cls.getNumOfStudents())
                 return cls.getName();
             else
                 return "There is an equal number of students.";

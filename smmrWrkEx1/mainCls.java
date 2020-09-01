@@ -1,17 +1,17 @@
 import java.util.*;
 /**
- * Write a description of class main here.
+ * Write a description of class mainCls here.
  *
  * @author (A.Y.B)
  * @version (a version number or a date)
  */
-public class main
+public class mainCls
 {
     public static Scanner reader = new Scanner(System.in);
     public static void main(String[] args)
     {
         //2
-        
+        /*
         SchoolClass cls1 = new SchoolClass(3, "Geoffrey");
         SchoolClass cls2 = new SchoolClass(2, "George");
         
@@ -52,9 +52,9 @@ public class main
         }
         //3
         System.out.println(cls1.getBigger(cls2));
-        
+        */
         //6
-    /*    SchoolClass[] School = new SchoolClass[5];
+        SchoolClass[] School = new SchoolClass[5];
         String teachName, name;
         int classNum;
         for(int i = 0; i < 5; i++)
@@ -66,7 +66,7 @@ public class main
             School[i] = new SchoolClass(classNum, teachName);
             System.out.print("Please enter the student name: ");
             name = reader.next();
-            while(name != "end")
+            while(!(name.equals("end")))
             {
                 School[i].insertStudent(name);
                 System.out.print("Please enter the student name: ");
@@ -79,16 +79,16 @@ public class main
         {
             sumAll += School[i].getNumOfStudents();
         }
+        System.out.println("The average number of students in a class is: " + ((double)sumAll/School[0].getTotNumClass()) + ".");
         
-        System.out.println("The average number of students in a class is: " + (sumAll/School[0].getTotNumClass()) + ".");
     }
 
-    */
+    
     //4
     public void addStudent(SchoolClass cls1, SchoolClass cls2, String name)
     {
-        int n1 = cls1.getStudNames().length;
-        int n2 = cls2.getStudNames().length;
+        int n1 = cls1.getNumOfStudents();
+        int n2 = cls2.getNumOfStudents();
         
         if(n1 <= n2 && n1 < 40)
             cls1.insertStudent(name );
@@ -98,7 +98,6 @@ public class main
             else
                 System.out.println("Both classes are full.");
     }
-    
     
     //5
     public void merge(SchoolClass cls1, SchoolClass cls2, String name)
