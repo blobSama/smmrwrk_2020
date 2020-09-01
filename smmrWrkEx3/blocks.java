@@ -1,17 +1,16 @@
 public class blocks
 {
-    public static int smallestLet(String str)
+    public static String smallestLet(String str)
     {
         String ansStr = "", currStr = "";
-        int cntr = 0;
+        int min = 0;
         while(str.indexOf("#") != -1)
         {
             currStr = "";
             for(int i = 0; i < str.indexOf("#"); i++)
             {
-                currStr = currStr + str.charAt(i);
+                currStr = str.substring(0, str.indexOf("#"));
             }
-            int min = 0;
             for(int i = 0; i < currStr.length(); i++)
             {
                 if(currStr.charAt(i) < currStr.charAt(min))
@@ -19,12 +18,21 @@ public class blocks
                     min = i;
                 }
             }
-            ansStr = ansStr + currStr + "#";
+            ansStr = ansStr + str.charAt(min) + "#";
             str = str.substring((str.indexOf("#") + 1));
         }
-        return str.indexOf("#");
+        min = 0;
+        for(int i = 0; i < str.length();i++)
+        {
+            if(str.charAt(i) < str.charAt(min))
+            {
+                min = i;
+            }
+        }
+        ansStr = ansStr + str.charAt(min) + "#";
+        return ansStr;
     }
-    /.*
+    
     public int numOfStarts(String[] strArr, char ch)
     {
         int cntr = 0;
